@@ -10,16 +10,20 @@ import java.util.HashSet;
 public class Main {
 
 
-
     public static void main(String[] args) {
         // write your code here
-         //exampleMethod();
+        //exampleMethod();
         //Object o = new Object();
         //o.hashCode()
-         //exampleMethod2();
-        //exampleMethod3();
-        //exampleMethod8();
-        exampleMethodWorkWithString();
+        //exampleMethod2();
+//        exampleMethod3();
+//        exampleMethod8();
+//        exampleMethodWorkWithString();
+        methodFromSergii();
+    }
+
+    private static void methodFromSergii() {
+        System.out.println("hi there!!");
     }
 
     private static void exampleMethodWorkWithString() {
@@ -123,9 +127,9 @@ public class Main {
     }
 
 
-    public static  void exampleMethod8 (){
+    public static void exampleMethod8() {
 
-            ArrayList<Travel> list = new ArrayList<Travel>();
+        ArrayList<Travel> list = new ArrayList<Travel>();
         Travel myTravel = new Travel();
         list.add(myTravel);
         BusTravel busTravel = new BusTravel();
@@ -138,10 +142,10 @@ public class Main {
         HashSet Travel = new HashSet();
     }
 
-   // hashMap<String, Travel>*/
+    // hashMap<String, Travel>*/
 
-    public static void exampleMethod4(){
-    Travel myTravel =  new Travel();
+    public static void exampleMethod4() {
+        Travel myTravel = new Travel();
         myTravel.chooseTour();
         myTravel.checkWeather();
         AviaTravel aviaTravel = new AviaTravel();
@@ -154,13 +158,13 @@ public class Main {
         myCalendar.showCurrentDay();
     }
 
-        public static void exampleMethod2() {
+    public static void exampleMethod2() {
         MyCalculator calculator = new MyCalculator();
-        for (int i = 0; i < 100; i++ ) {
+        for (int i = 0; i < 100; i++) {
             int res = calculator.addFive(i);
             System.out.println("result: " + res);
         }
-        }
+    }
 
     public static void exampleMethod() {
         System.out.println("hello Vanya");
