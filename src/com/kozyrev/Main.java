@@ -4,6 +4,9 @@ package com.kozyrev;
 import com.kozyrev.other_package.MyCalculator;
 import com.kozyrev.other_package.MyCalendar;
 
+import javax.sound.sampled.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -19,7 +22,27 @@ public class Main {
 //        exampleMethod3();
 //        exampleMethod8();
 //        exampleMethodWorkWithString();
+        try {
+            playSound("beats.wav");
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         methodFromSergii();
+    }
+
+    static void playSound(String soundFile) throws LineUnavailableException, IOException, UnsupportedAudioFileException, InterruptedException {
+        File f = new File("src/com/kozyrev/" + soundFile);
+        AudioInputStream audioIn = AudioSystem.getAudioInputStream(f.toURI().toURL());
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioIn);
+        clip.start();
+        Thread.sleep(2000);
     }
 
     private static void methodFromSergii() {
